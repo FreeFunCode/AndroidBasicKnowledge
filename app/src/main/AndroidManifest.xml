@@ -23,16 +23,23 @@
             android:name=".activity.SecondActivity"
             android:exported="false" />
         <activity
-            android:name=".service.MainActivity"
+            android:name=".broadcast.MainActivity"
             android:configChanges="orientation|screenSize"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <service android:name=".service.FirstService"/>
+
+        <service android:name=".service.FirstService" />
+
+        <receiver android:name=".broadcast.StaticReceiver">
+            <intent-filter>
+                <action android:name="com.example.static" />
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>
