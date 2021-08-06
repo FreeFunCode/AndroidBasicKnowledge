@@ -5,6 +5,7 @@
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
 
     <application
+        android:name=".MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -23,7 +24,7 @@
             android:name=".activity.SecondActivity"
             android:exported="false" />
         <activity
-            android:name=".broadcast.MainActivity"
+            android:name=".contentprovider.MainActivity"
             android:configChanges="orientation|screenSize"
             android:exported="true">
             <intent-filter>
@@ -40,6 +41,11 @@
                 <action android:name="com.example.static" />
             </intent-filter>
         </receiver>
+
+        <provider android:name=".contentprovider.MyProvider"
+            android:authorities="com.example.myprovider"
+        />
+
     </application>
 
 </manifest>
