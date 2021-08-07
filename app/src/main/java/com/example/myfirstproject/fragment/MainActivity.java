@@ -39,7 +39,7 @@ public class MainActivity extends BaseActivity implements SetData{
 //                FragmentManager fragmentManager = getSupportFragmentManager();
 //                FragmentTransaction transaction = fragmentManager.beginTransaction();
 //                transaction.addToBackStack(null);   //添加进回退栈
-//                transaction.replace(R.id.container, My2Fragment.newInstance("hello"));
+//                transaction.add(R.id.container, My2Fragment.newInstance());
 //                transaction.commit();
 //            }
 //        });
