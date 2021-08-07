@@ -24,7 +24,7 @@
             android:name=".activity.SecondActivity"
             android:exported="false" />
         <activity
-            android:name=".threadpool.MainActivity"
+            android:name=".async.MainActivity"
             android:configChanges="orientation|screenSize"
             android:exported="true">
             <intent-filter>
@@ -35,6 +35,7 @@
         </activity>
 
         <service android:name=".service.FirstService" />
+        <service android:name=".async.MyIntentService" />
 
         <receiver android:name=".broadcast.StaticReceiver">
             <intent-filter>
