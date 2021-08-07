@@ -10,8 +10,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.myfirstproject.BaseActivity;
 import com.example.myfirstproject.R;
-import com.example.myfirstproject.activity.BaseActivity;
 
 public class MainActivity extends BaseActivity {
     public static final String TAG = "MainActivity_ContentProvider";

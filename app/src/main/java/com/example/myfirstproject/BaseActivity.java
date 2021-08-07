@@ -1,13 +1,15 @@
-package com.example.myfirstproject.activity;
+package com.example.myfirstproject;
 
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 
 public class BaseActivity extends AppCompatActivity {
     private String TAG = "Activity";
@@ -20,6 +22,12 @@ public class BaseActivity extends AppCompatActivity {
     }
 
     @Override
+    protected void onPostCreate(@Nullable Bundle savedInstanceState) {
+        super.onPostCreate(savedInstanceState);
+        Log.d(TAG,"onPostCreate");
+    }
+
+    @Override
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
         Log.d(TAG,"onRestoreInstanceState");
@@ -29,6 +37,12 @@ public class BaseActivity extends AppCompatActivity {
     public void onConfigurationChanged(@NonNull Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
         Log.d(TAG,"onConfigurationChanged"+newConfig);
+    }
+
+    @Override
+    protected void onPostResume() {
+        super.onPostResume();
+        Log.d(TAG,"onPostResume");
     }
 
     @Override
@@ -50,9 +64,33 @@ public class BaseActivity extends AppCompatActivity {
     }
 
     @Override
+    public void onAttachFragment(@NonNull Fragment fragment) {
+        super.onAttachFragment(fragment);
+        Log.d(TAG,"onAttachFragment");
+    }
+
+    @Override
     protected void onDestroy() {
         super.onDestroy();
         Log.d(TAG,"onDestroy");
+    }
+
+    @Override
+    public void onContentChanged() {
+        super.onContentChanged();
+        Log.d(TAG,"onContentChanged");
+    }
+
+    @Override
+    public void onAttachedToWindow() {
+        super.onAttachedToWindow();
+        Log.d(TAG,"onAttachedToWindow");
+    }
+
+    @Override
+    public boolean onPrepareOptionsMenu(Menu menu) {
+        Log.d(TAG,"onPrepareOptionsMenu");
+        return super.onPrepareOptionsMenu(menu);
     }
 
     @Override

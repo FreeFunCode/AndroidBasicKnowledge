@@ -24,7 +24,7 @@
             android:name=".activity.SecondActivity"
             android:exported="false" />
         <activity
-            android:name=".contentprovider.MainActivity"
+            android:name=".fragment.MainActivity"
             android:configChanges="orientation|screenSize"
             android:exported="true">
             <intent-filter>
@@ -42,10 +42,9 @@
             </intent-filter>
         </receiver>
 
-        <provider android:name=".contentprovider.MyProvider"
-            android:authorities="com.example.myprovider"
-        />
-
+        <provider
+            android:name=".contentprovider.MyProvider"
+            android:authorities="com.example.myprovider" />
     </application>
 
 </manifest>
