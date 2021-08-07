@@ -24,7 +24,7 @@
             android:name=".activity.SecondActivity"
             android:exported="false" />
         <activity
-            android:name=".fragment.MainActivity"
+            android:name=".threadpool.MainActivity"
             android:configChanges="orientation|screenSize"
             android:exported="true">
             <intent-filter>
